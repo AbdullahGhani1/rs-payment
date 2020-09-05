@@ -4,6 +4,8 @@ Description=Payment Service
 [Service]
 User=root
 WorkingDirectory=/home/roboshop/payment
+Environment=CART_HOST=
+Environment=USER_HOST=
 ExecStart=/usr/local/bin/uwsgi --ini payment.ini
 SyslogIdentifier=payment
 
